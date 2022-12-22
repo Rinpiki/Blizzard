@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import iconMenu from '../../assets/icons/menu.svg'
 import iconX from '../../assets/icons/menux.png'
-import Menux from '../../style'
+import { MenuCointainer, Iopen, Iclouse } from '../../style'
 
 function Menu() {
   const [menu, setMenu] = useState(true)
@@ -10,15 +10,17 @@ function Menu() {
     console.log(menu)
   }
   return (
-    <div>
+    <MenuCointainer>
       {menu ? (
-        <img src={iconMenu} onClick={click} alt="icone Menu" />
+        <Iopen>
+          <img src={iconMenu} onClick={click} alt="icone Menu" />
+        </Iopen>
       ) : (
-        <Menux onClick={click}>
+        <Iclouse onClick={click}>
           <img src={iconX} alt="icone menu x" />
-        </Menux>
+        </Iclouse>
       )}
-    </div>
+    </MenuCointainer>
   )
 }
 export default Menu

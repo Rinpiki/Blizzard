@@ -1,4 +1,6 @@
 import styled from 'styled-components'
+import logar from './assets/icons/logar.png'
+
 export const Logo = styled.div`
   background: transparent;
   display: flex;
@@ -31,14 +33,9 @@ export const Logo = styled.div`
       height: 40px;
     }
   }
-  & > :nth-child(2) {
-    @media (min-width: 768px) {
-      display: none;
-    }
-  }
 `
 
-export const Btns = styled.button`
+export const Btns = styled.div`
   @media (min-width: 0px) {
     display: none;
   }
@@ -46,8 +43,56 @@ export const Btns = styled.button`
     display: flex;
   }
 `
-export const menux = styled.div`
-  height: 32px;
+export const BtnOne = styled.div`
+  font-size: 14px;
+  padding: 10px 23px 10px 23px;
+  text-align: center;
+  margin-right: 10px;
+  color: #ffffff;
+  border: solid 2px #ffffff;
+  border-radius: 5px;
+  &:hover {
+    background: #ffffff;
+    color: #202a2d;
+    cursor: pointer;
+  }
+`
+export const BtnTwo = styled(BtnOne)`
+  background: #00aeff;
+  border-color: #00aeff;
+  &:hover {
+    background: #0594d6;
+    border-color: #0594d6;
+    color: #ffff;
+  }
+  &::before {
+    content: '';
+    display: inline-block;
+    justify-items: center;
+    background-image: url('${logar}');
+    margin-right: 5px;
+    height: 18px;
+    width: 18px;
+  }
+`
+
+export const Iclouse = styled.div`
+  height: 28px;
+  width: 28px;
+  cursor: pointer;
+`
+
+export const Iopen = styled.div`
+  height: 18px;
+  width: 28px;
+  cursor: pointer;
+`
+export const MenuCointainer = styled.div`
+  @media (min-width: 768px) {
+    & {
+      display: none;
+    }
+  }
 `
 
 export const Headerr = styled.div`

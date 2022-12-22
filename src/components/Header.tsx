@@ -1,14 +1,15 @@
 import blizzard from '../assets/icons/blizzard.svg'
-import { Logo, Headerr, Btns } from '../style'
+import { Logo, Headerr, Btns, BtnOne, BtnTwo } from '../style'
 import Menu from './microcomponents/Menu'
+
 function Header() {
   return (
     <Headerr>
       <Logo>
         <img src={blizzard} alt="logo blizzard" />
         <Btns>
-          <button>Login</button>
-          <button>cadastrar</button>
+          <BtnOne>criar conta</BtnOne>
+          <BtnTwo>Logar</BtnTwo>
         </Btns>
         <Menu />
       </Logo>
