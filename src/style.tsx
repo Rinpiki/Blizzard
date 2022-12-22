@@ -1,5 +1,10 @@
 import styled from 'styled-components'
 import logar from './assets/icons/logar.png'
+import listicon1 from './assets/icons/listicon1.svg'
+import listicon2 from './assets/icons/listicon2.svg'
+import listicon3 from './assets/icons/listicon3.png'
+import listicon4 from './assets/icons/listicon4.svg'
+import listicon5 from './assets/icons/listicon5.svg'
 
 export const Logo = styled.div`
   background: transparent;
@@ -101,5 +106,51 @@ export const Headerr = styled.div`
   justify-content: center;
   width: 100vw;
   border-bottom: 2px solid #313236;
-  z-index: 2;
+`
+
+export const ModalContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  z-index: -2;
+  background: #000001;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+`
+export const ListOne = styled.ul`
+  font-size: 20px;
+  color: #ffff;
+  margin-top: 90px;
+  margin-left: 20px;
+  list-style: none;
+  li {
+    margin-bottom: 10px;
+  }
+  li + li {
+    margin-bottom: 10px;
+  }
+  li:hover {
+    color: #00aeff;
+  }
+`
+export const ListTwo = styled(ListOne)`
+  font-size: 16px;
+  margin-top: 45px;
+  margin-left: 45px;
+  li:nth-child(1) {
+    list-style-image: url('${listicon1}');
+  }
+  li:nth-child(2) {
+    list-style-image: url('${listicon2}');
+  }
+  li:nth-child(3) {
+    list-style-image: url('${listicon3}');
+  }
+  li:nth-child(4) {
+    list-style-image: url('${listicon4}');
+  }
+  li:nth-child(5) {
+    list-style-image: url('${listicon5}');
+  }
 `
