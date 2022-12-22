@@ -19,7 +19,7 @@ export const Logo = styled.div`
   }
   @media (min-width: 768px) {
     &::after {
-      top: 88px;
+      top: 92px;
     }
   }
 
@@ -45,7 +45,7 @@ export const Btns = styled.div`
 `
 export const BtnOne = styled.div`
   font-size: 14px;
-  padding: 10px 23px 10px 23px;
+  padding: 8px 20px;
   text-align: center;
   margin-right: 10px;
   color: #ffffff;
@@ -70,7 +70,7 @@ export const BtnTwo = styled(BtnOne)`
     display: inline-block;
     justify-items: center;
     background-image: url('${logar}');
-    margin-right: 5px;
+    margin-right: 8px;
     height: 18px;
     width: 18px;
   }

@@ -8,7 +8,7 @@ function Header() {
       <Logo>
         <img src={blizzard} alt="logo blizzard" />
         <Btns>
-          <BtnOne>criar conta</BtnOne>
+          <BtnOne>Criar Conta</BtnOne>
           <BtnTwo>Logar</BtnTwo>
         </Btns>
         <Menu />
