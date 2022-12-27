@@ -1,8 +1,15 @@
+import { useState } from 'react'
 import blizzard from '../assets/icons/blizzard.svg'
 import { Logo, Headerr, Btns, BtnOne, BtnTwo } from '../style'
+import LoginModal from './microcomponents/LoginModal'
 import Menu from './microcomponents/Menu'
 
 function Header() {
+  const [loginModal, setLoginModal] = useState(true)
+  const login = () => {
+    setLoginModal(!loginModal)
+    console.log(loginModal)
+  }
   return (
     <Headerr>
       <Logo>
@@ -11,7 +18,7 @@ function Header() {
           <BtnOne>
             <p>Criar Conta</p>
           </BtnOne>
-          <BtnTwo>Logar</BtnTwo>
+          <LoginModal />
         </Btns>
         <Menu />
       </Logo>
