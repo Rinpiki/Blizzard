@@ -24,7 +24,7 @@ export const Logo = styled.div`
   }
   @media (min-width: 768px) {
     &::after {
-      top: 92px;
+      top: 90px;
     }
   }
 
@@ -50,12 +50,14 @@ export const Btns = styled.div`
 `
 export const BtnOne = styled.div`
   font-size: 14px;
-  padding: 8px 20px;
   text-align: center;
   margin-right: 10px;
   color: #ffffff;
-  border: solid 2px #ffffff;
+  border: solid 1px #ffffff;
   border-radius: 5px;
+  & > p {
+    margin: 10px 20px 8px 20px;
+  }
   &:hover {
     background: #ffffff;
     color: #202a2d;
@@ -65,6 +67,7 @@ export const BtnOne = styled.div`
 export const BtnTwo = styled(BtnOne)`
   background: #00aeff;
   border-color: #00aeff;
+  padding: 8px 20px 8px 20px;
   &:hover {
     background: #0594d6;
     border-color: #0594d6;
@@ -140,6 +143,7 @@ export const ListTwo = styled(ListOne)`
   margin-left: 45px;
   li:nth-child(1) {
     list-style-image: url('${listicon1}');
+    margin-left: -8px;
   }
   li:nth-child(2) {
     list-style-image: url('${listicon2}');
