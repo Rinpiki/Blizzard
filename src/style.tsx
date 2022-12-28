@@ -264,10 +264,14 @@ export const TextAndicons = styled.div`
   div:nth-child(2) {
     img {
       margin-right: 16px;
+      transition: transform 0.2s ease-in-out;
       cursor: pointer;
     }
     img + img {
       margin-right: 16px;
+    }
+    img:hover {
+      transform: scale(1.1);
     }
   }
   div:nth-child(3) {

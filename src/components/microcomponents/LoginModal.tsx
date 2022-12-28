@@ -8,9 +8,9 @@ import {
 } from 'src/style'
 import battlenet from '../../assets/icons/battlenet.png'
 import xblue from '../../assets/icons/xblue.png'
-import google from '../../assets/icons/logingoogle.png'
-import apple from '../../assets/icons/loginapple.png'
-import facebook from '../../assets/icons/loginfacebook.png'
+import google from '../../assets/icons/logingoogle.svg'
+import apple from '../../assets/icons/loginapple.svg'
+import facebook from '../../assets/icons/loginfacebook.svg'
 
 function LoginModal() {
   const [loginModal, setLoginModal] = useState(false)
