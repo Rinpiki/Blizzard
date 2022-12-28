@@ -1,10 +1,11 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import logar from './assets/icons/logar.png'
 import listicon1 from './assets/icons/listicon1.svg'
 import listicon2 from './assets/icons/listicon2.svg'
 import listicon3 from './assets/icons/listicon3.png'
 import listicon4 from './assets/icons/listicon4.svg'
 import listicon5 from './assets/icons/listicon5.svg'
+import loginModal from './assets/banner/login-bg.webp'
 
 export const Logo = styled.div`
   background: transparent;
@@ -156,5 +157,133 @@ export const ListTwo = styled(ListOne)`
   }
   li:nth-child(5) {
     list-style-image: url('${listicon5}');
+  }
+`
+//modal de login
+
+export const ContainerModalLogin = styled.div`
+  display: flex;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 20;
+  background-color: rgba(0, 0, 0, 0.5);
+`
+export const ModalLogin = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  width: 696px;
+  height: 598px;
+  margin: 50px auto;
+  z-index: 25;
+  opacity: 1;
+  background: url('${loginModal}');
+  background-repeat: no-repeat;
+  & > div {
+    width: 16px;
+    height: 16px;
+    position: relative;
+    left: 308px;
+    top: 28px;
+    cursor: pointer;
+    z-index: 30;
+  }
+  & > img {
+    z-index: 15;
+    width: 166px;
+    height: 20px;
+    margin-top: 46px;
+    margin-bottom: 40px;
+  }
+`
+//animaçao do formulario
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`
+//formulario
+export const FormStyled = styled.form`
+  display: flex;
+  flex-direction: column;
+  animation: ${fadeIn} 0.2s ease-in;
+  input:nth-child(1) {
+    width: 426px;
+    height: 48px;
+    border-radius: 4px;
+    border: none;
+    margin-bottom: 16px;
+    font-weight: 600;
+    font-size: 15px;
+    color: #363842;
+    padding: 12px 0px 12px 16px;
+  }
+  input:nth-child(2) {
+    width: 426px;
+    height: 48px;
+    border-radius: 4px;
+    border: none;
+    margin-bottom: 16px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #363842;
+    padding: 12px 0px 12px 16px;
+  }
+  input:nth-child(3) {
+    width: 426px;
+    height: 48px;
+    border-radius: 4px;
+    border: none;
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff;
+    background: #00aeff;
+    margin-bottom: 41px;
+    cursor: pointer;
+    &:hover {
+      background: #0594d6;
+    }
+  }
+`
+export const TextAndicons = styled.div`
+  align-items: center;
+  text-align: center;
+  div:nth-child(1) {
+    color: white;
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+  div:nth-child(2) {
+    img {
+      margin-right: 16px;
+      cursor: pointer;
+    }
+    img + img {
+      margin-right: 16px;
+    }
+  }
+  div:nth-child(3) {
+    font-size: 16px;
+    color: white;
+    margin-top: 35px;
+
+    span {
+      color: #00aeff;
+      margin-right: 5px;
+      cursor: pointer;
+    }
+    div {
+      color: #00aeff;
+      margin-top: 16px;
+      cursor: pointer;
+    }
   }
 `
