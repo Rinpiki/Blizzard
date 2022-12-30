@@ -7,7 +7,17 @@ import listicon4 from './assets/icons/listicon4.svg'
 import listicon5 from './assets/icons/listicon5.svg'
 import loginModal from './assets/banner/login-bg.webp'
 
+//animaçao geral
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`
 export const Logo = styled.div`
+  animation: ${fadeIn} 0.5s ease-in;
   background: transparent;
   display: flex;
   padding: 24px;
@@ -96,6 +106,7 @@ export const Iopen = styled.div`
   width: 28px;
   cursor: pointer;
 `
+
 export const MenuCointainer = styled.div`
   @media (min-width: 768px) {
     & {
@@ -113,10 +124,11 @@ export const Headerr = styled.div`
 `
 
 export const ModalContainer = styled.div`
+  animation: ${fadeIn} 0.5s ease-in;
   display: flex;
   flex-direction: column;
   width: 100vw;
-  z-index: -2;
+  z-index: -5;
   background: #000001;
   position: absolute;
   left: 0%;
@@ -200,20 +212,12 @@ export const ModalLogin = styled.div`
     margin-bottom: 40px;
   }
 `
-//animaçao do formulario
-const fadeIn = keyframes`
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-`
+
 //formulario
 export const FormStyled = styled.form`
   display: flex;
   flex-direction: column;
-  animation: ${fadeIn} 0.2s ease-in;
+  animation: ${fadeIn} 0.4s ease-in;
   input:nth-child(1) {
     width: 426px;
     height: 48px;
