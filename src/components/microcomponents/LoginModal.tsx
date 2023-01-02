@@ -7,7 +7,7 @@ import {
   TextAndicons,
 } from '../../style'
 
-import battlenet from '../../assets/icons/battlenet.png'
+import baa from '../../assets/icons/baa.png'
 import xblue from '../../assets/icons/xblue.png'
 import google from '../../assets/icons/logingoogle.svg'
 import apple from '../../assets/icons/loginapple.svg'
@@ -28,7 +28,7 @@ function LoginModal() {
             <div onClick={login}>
               <img src={xblue} alt="um X" />
             </div>
-            <img src={battlenet} alt="logo de titulo da battlenet" />
+            <img src={baa} alt="logo de titulo da battlenet" />
             <FormStyled>
               <input
                 type="email"
