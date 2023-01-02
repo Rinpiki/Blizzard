@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { ListOne, ListTwo, ModalContainer } from '../../style'
-//o modal usa o valor do useState para abrir e fechar
+//o modal usa o valor do useState para abrir e fechar.
 function Modal() {
   return (
     <ModalContainer>
