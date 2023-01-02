@@ -16,6 +16,7 @@
     "axios": "^1.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-is": ">=16.8.0",
     "styled-components": "^5.3.6",
     "tsconfck": "^2.0.2"
   },
