@@ -5,7 +5,7 @@ import {
   ModalLogin,
   FormStyled,
   TextAndicons,
-} from 'src/style'
+} from '../../style'
 import battlenet from '../../assets/icons/battlenet.png'
 import xblue from '../../assets/icons/xblue.png'
 import google from '../../assets/icons/logingoogle.svg'
