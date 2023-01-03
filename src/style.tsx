@@ -52,6 +52,8 @@ export const Logo = styled.div`
 `
 
 export const Btns = styled.div`
+  display: flex;
+  align-items: center;
   @media (min-width: 0px) {
     display: none;
   }
@@ -108,6 +110,15 @@ export const Iopen = styled.div`
 `
 
 export const MenuCointainer = styled.div`
+  margin-left: 80px;
+  @media (min-width: 900px) {
+    & {
+      display: none;
+    }
+  }
+`
+export const MenuContainerMobile = styled(MenuCointainer)`
+  margin-left: 0px;
   @media (min-width: 768px) {
     & {
       display: none;
@@ -129,7 +140,13 @@ export const ModalContainer = styled.div`
   flex-direction: column;
   width: 100vw;
   z-index: -5;
-  background: #000001;
+  background: rgb(14, 17, 23);
+  background: linear-gradient(
+    180deg,
+    rgba(14, 17, 23, 1) 0%,
+    rgba(13, 13, 19, 1) 35%,
+    rgba(2, 2, 0, 1) 100%
+  );
   position: absolute;
   left: 0%;
   top: 0%;
@@ -137,7 +154,7 @@ export const ModalContainer = styled.div`
 export const ListOne = styled.ul`
   font-size: 20px;
   color: #ffff;
-  margin-top: 90px;
+  margin-top: 100px;
   margin-left: 20px;
   list-style: none;
   li {
