@@ -2,17 +2,21 @@ import styled from 'styled-components'
 
 export const ContainerAcorddion = styled.div`
   display: none;
-  @media (min-width: 768px) {
+  @media (min-width: 900px) {
     & {
-      display: none;
+      display: flex;
     }
   }
 `
 
 export const DropM = styled.div`
   color: white;
-  font-size: 12px;
+  font-size: 14px;
   margin-right: 34px;
+  img {
+    margin-left: 14px;
+    cursor: pointer;
+  }
 `
 
 export const Ul = styled.ul`
@@ -20,7 +24,8 @@ export const Ul = styled.ul`
   li {
     margin-right: 34px;
     list-style: none;
-    font-size: 12px;
+    font-size: 14px;
+    cursor: pointer;
   }
   li + li {
     margin-right: 34px;
