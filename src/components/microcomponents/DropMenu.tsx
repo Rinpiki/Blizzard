@@ -14,7 +14,7 @@ function DropMenu() {
   }
   return (
     <ContainerAcorddion>
-      <DropM>
+      <DropM onClick={openMenu}>
         Jogos
         {open ? (
           <img onClick={openMenu} src={baixo} alt="seta pra baixo" />
@@ -22,7 +22,7 @@ function DropMenu() {
           <img onClick={openMenu} src={cima} alt="seta pra cima" />
         )}
       </DropM>
-      <DropM>
+      <DropM onClick={openMenuTwo}>
         Esportes
         {openTwo ? (
           <img onClick={openMenuTwo} src={baixo} alt="seta pra baixo" />

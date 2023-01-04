@@ -13,6 +13,8 @@ export const DropM = styled.div`
   color: white;
   font-size: 14px;
   margin-right: 34px;
+  cursor: pointer;
+
   img {
     margin-left: 14px;
     cursor: pointer;
