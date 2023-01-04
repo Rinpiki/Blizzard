@@ -1,17 +1,34 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { ContainerAcorddion, Ul, DropM } from 'src/styles/styleaccordion'
 import baixo from '../../assets/icons/setabaixo.svg'
+import cima from '../../assets/icons/setacima.svg'
 
 function DropMenu() {
+  const [open, setOpen] = useState(true)
+  const [openTwo, setOpenTwo] = useState(true)
+  const openMenu = () => {
+    setOpen(!open)
+  }
+  const openMenuTwo = () => {
+    setOpenTwo(!openTwo)
+  }
   return (
     <ContainerAcorddion>
       <DropM>
         Jogos
-        <img src={baixo} alt="seta pra baixo" />
+        {open ? (
+          <img onClick={openMenu} src={baixo} alt="seta pra baixo" />
+        ) : (
+          <img onClick={openMenu} src={cima} alt="seta pra cima" />
+        )}
       </DropM>
       <DropM>
         Esportes
-        <img src={baixo} alt="seta pra baixo" />
+        {openTwo ? (
+          <img onClick={openMenuTwo} src={baixo} alt="seta pra baixo" />
+        ) : (
+          <img onClick={openMenuTwo} src={cima} alt="seta pra cima" />
+        )}
       </DropM>
       <Ul>
         <li>Loja</li>

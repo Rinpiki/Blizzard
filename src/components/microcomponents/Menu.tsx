@@ -8,7 +8,6 @@ function Menu() {
   const [menu, setMenu] = useState(true)
   const click = () => {
     setMenu(!menu)
-    console.log(menu)
   }
   return (
     <MenuCointainer>
