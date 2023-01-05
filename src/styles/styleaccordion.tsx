@@ -57,12 +57,11 @@ export const ContainerModalMenu = styled.div`
   width: 100vw;
   height: 600px;
   z-index: -2;
-  background: rgb(14, 17, 23);
   background: linear-gradient(
-    180deg,
-    rgba(14, 17, 23, 1) 0%,
-    rgba(13, 13, 19, 1) 35%,
-    rgba(2, 2, 0, 1) 100%
+    0deg,
+    #020203 0%,
+    rgba(14, 17, 23, 0.92) 96.35%,
+    rgba(14, 17, 23, 0.9) 100%
   );
   position: absolute;
   left: 0%;
@@ -97,11 +96,16 @@ export const Text = styled.div`
 export const StyledUl = styled.div`
   display: flex;
   margin: 2px auto;
+  font-weight: 600;
   color: white;
   div {
     display: flex;
     align-items: center;
     margin-right: 64px;
+    &:hover {
+      color: #01aefe;
+    }
+    cursor: pointer;
   }
 
   div > img {
@@ -117,6 +121,20 @@ export const Footer = styled.div`
   background: #15171b;
   display: flex;
   width: 100%;
-  padding: 10px;
+  padding: 20px;
   align-items: center;
 `
+
+export const ContainerModalMenuTwo = styled(ContainerModalMenu)`
+  height: 550px;
+`
+
+export const ContainerIconsTwo = styled(ContainerIcons)`
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+`
+
+export const TextTwo = styled(Text)``

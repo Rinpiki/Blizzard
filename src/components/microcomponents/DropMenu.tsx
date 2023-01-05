@@ -3,15 +3,18 @@ import { ContainerAcorddion, Ul, DropM } from 'src/styles/styleaccordion'
 import baixo from '../../assets/icons/setabaixo.svg'
 import cima from '../../assets/icons/setacima.svg'
 import SectionMenuModal from './SectionMenuModal'
+import SectionMenuModalTwo from './SectionMenuModalTwo'
 
 function DropMenu() {
   const [open, setOpen] = useState(true)
   const [openTwo, setOpenTwo] = useState(true)
   const openMenu = () => {
     setOpen(!open)
+    setOpenTwo(true)
   }
   const openMenuTwo = () => {
     setOpenTwo(!openTwo)
+    setOpen(true)
   }
   return (
     <ContainerAcorddion>
@@ -37,6 +40,7 @@ function DropMenu() {
         <li>Suporte</li>
       </Ul>
       {open ? null : <SectionMenuModal />}
+      {openTwo ? null : <SectionMenuModalTwo />}
     </ContainerAcorddion>
   )
 }

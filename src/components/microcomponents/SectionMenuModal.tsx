@@ -68,7 +68,7 @@ function SectionMenuModal() {
     },
     {
       src: img11,
-      text: 'Arcade da Blizzard®',
+      text: 'StarCraft® Remastered',
     },
     {
       src: img12,
