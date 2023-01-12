@@ -130,8 +130,9 @@ export const Headerr = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 5;
   width: 100vw;
-  border-bottom: 2px solid #313236;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
 `
 
 export const ModalContainer = styled.div`
