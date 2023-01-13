@@ -9,10 +9,19 @@ interface TypeProps {
   backgroundImage: string
 }
 interface TypePropsFilter {
-  filter: string
+  filter?: string
+  animation?: boolean
 }
 
-const fadeIn = keyframes`
+export const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`
+export const fadeIn2 = keyframes`
   from {
     opacity: 0;
   }
@@ -62,7 +71,7 @@ export const StyledP = styled.p`
 `
 
 export const StyledButton = styled.button`
-  animation: ${fadeIn} 0.5s ease-in;
+  transition: transform 0.3s ease-in-out;
   padding: 14px 32px;
   background: #00aeff;
   margin-top: 32px;
@@ -73,6 +82,9 @@ export const StyledButton = styled.button`
   font-size: 16px;
   color: #ffffff;
   cursor: pointer;
+  &:hover {
+    transform: scale(1.05);
+  }
 `
 
 export const UlIcons = styled.div`
@@ -89,5 +101,4 @@ export const StyledImg = styled.img<TypePropsFilter>`
   margin-right: 16px;
   filter: ${(props) => props.filter};
   cursor: pointer;
-  animation: ${fadeIn} 0.5s ease-in;
 `

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import {
   Container,
   ContainerImg,
@@ -9,6 +9,7 @@ import {
   UlIcons,
 } from 'src/styles/stylesection'
 import styled from 'styled-components'
+import { fadeIn } from '../styles/stylesection'
 import banner1 from '../assets/banner/banner1.jpg'
 import banner2 from '../assets/banner/banner2.jpg'
 import banner3 from '../assets/banner/banner3.jpg'
@@ -33,10 +34,8 @@ function Section() {
   const [styledP, setStyledp] = useState(
     'O retorno de Lilith traz uma era de escuridão e sofrimento',
   )
-
   const [btnText, setbtnText] = useState('Jogue Agora')
   const setOption = (event: React.MouseEvent<HTMLImageElement>) => {
-    console.log(event.currentTarget.id)
     const value = event.currentTarget.id
     if (value == 'icon1') {
       setBanner(banner1)
@@ -99,7 +98,7 @@ function Section() {
       <Container>
         <div>
           <TextoH1>{text}</TextoH1>
-          <StyledP>{styledP}</StyledP>
+          <StyledP> {styledP}</StyledP>
           <StyledButton>{btnText}</StyledButton>
         </div>
         <UlIcons>
