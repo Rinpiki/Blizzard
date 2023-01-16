@@ -26,7 +26,9 @@ export const fadeIn2 = keyframes`
 `
 export const ContainerImg = styled.section<TypeProps>`
   width: 100%;
-  height: 736px;
+
+  height: 100vh;
+  max-height: 820px;
   display: flex;
   flex-direction: center;
   margin-top: -92px;
@@ -61,6 +63,11 @@ export const TextoH1 = styled.h1`
       width: 630px;
     }
   }
+  @media (min-width: 768px) {
+    & {
+      width: 600px;
+    }
+  }
 `
 export const StyledP = styled.p`
   width: 90%;
@@ -92,9 +99,6 @@ export const StyledButton = styled.button`
 export const UlIcons = styled.div`
   display: flex;
   margin-top: 48px;
-  img + img {
-    margin-left: 18px;
-  }
   @media (min-width: 1000px) {
     & {
       display: flex;
@@ -142,8 +146,12 @@ export const ContainerLogoVideo = styled.div`
   align-items: center;
   @media (min-width: 768px) {
     display: flex;
+    margin-top: 110px;
     position: absolute;
     right: 5%;
+  }
+  @media (min-width: 1000px) {
+    margin-top: 140px;
   }
   @media (min-width: 1500px) {
     right: 7%;
@@ -162,7 +170,15 @@ export const ContainerLogoVideo = styled.div`
   }
 `
 export const Logo = styled.img`
+  width: 280px;
+  height: 154px;
   margin-bottom: 180px;
+  @media (min-width: 768px) {
+    margin-bottom: 230px;
+  }
+  @media (min-width: 1000px) {
+    margin-bottom: 180px;
+  }
 `
 
 export const ContainerTextVideo = styled.div``

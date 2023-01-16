@@ -8,7 +8,6 @@ import {
   StyledButton,
   StyledImg,
   StyledP,
-  Text,
   TextoH1,
   UlIcons,
   Video,
@@ -28,17 +27,27 @@ import icon5 from '../assets/icons-first-section/icon5.png'
 import logo1 from '../assets/icons-first-section/logo&video/logo1.png'
 import logo2 from '../assets/icons-first-section/logo&video/logo2.png'
 import logo3 from '../assets/icons-first-section/logo&video/logo3.png'
+import logo4 from '../assets/icons-first-section/logo&video/logo4.webp'
+import logo5 from '../assets/icons-first-section/logo&video/logo5.webp'
 
 import preview1 from '../assets/icons-first-section/logo&video/video-preview1.png'
 import preview2 from '../assets/icons-first-section/logo&video/video-preview2.png'
 import preview3 from '../assets/icons-first-section/logo&video/video-preview3.png'
+import preview4 from '../assets/icons-first-section/logo&video/video-preview4.png'
+import preview5 from '../assets/icons-first-section/logo&video/video-preview5.png'
 
 import previewHover1 from '../assets/icons-first-section/logo&video/video-preview-hover1.png'
 import previewHover2 from '../assets/icons-first-section/logo&video/video-preview-hover2.png'
 import previewhover3 from '../assets/icons-first-section/logo&video/video-preview-hover3.png'
+import previewhover4 from '../assets/icons-first-section/logo&video/video-preview-hover4.png'
+import previewhover5 from '../assets/icons-first-section/logo&video/video-preview-hover5.png'
 
 function Section() {
-  const [imgSrc1, setImgSrc1] = useState(preview1)
+  const [imgSrc, setImgSrc] = useState(preview1)
+  const [imgSrcSave, setImgSrcSave] = useState(preview1)
+  const [imgSrcHover, setImgSrcHover] = useState(previewHover1)
+
+  const [logo, setLogo] = useState(logo1)
   const filters = ['grayscale(100%)', 'none']
   const [filter1, setFilter1] = useState(filters[1])
   const [filter2, setFilter2] = useState(filters[0])
@@ -55,6 +64,10 @@ function Section() {
     const value = event.currentTarget.id
     if (value == 'icon1') {
       setBanner(banner1)
+      setLogo(logo1)
+      setImgSrc(preview1)
+      setImgSrcSave(preview1)
+      setImgSrcHover(previewHover1)
       setFilter1(filters[1])
       setFilter2(filters[0])
       setFilter3(filters[0])
@@ -65,6 +78,10 @@ function Section() {
       setbtnText('Jogue agora')
     } else if (value == 'icon2') {
       setBanner(banner2)
+      setLogo(logo2)
+      setImgSrc(preview2)
+      setImgSrcSave(preview2)
+      setImgSrcHover(previewHover2)
       setFilter1(filters[0])
       setFilter2(filters[1])
       setFilter3(filters[0])
@@ -77,6 +94,10 @@ function Section() {
       setbtnText('Reserve agora na pré-venda')
     } else if (value == 'icon3') {
       setBanner(banner3)
+      setLogo(logo3)
+      setImgSrc(preview3)
+      setImgSrcSave(preview3)
+      setImgSrcHover(previewhover3)
       setFilter1(filters[0])
       setFilter2(filters[0])
       setFilter3(filters[1])
@@ -87,6 +108,10 @@ function Section() {
       setbtnText('Reserve agora na pré-venda')
     } else if (value == 'icon4') {
       setBanner(banner4)
+      setLogo(logo4)
+      setImgSrc(preview4)
+      setImgSrcSave(preview4)
+      setImgSrcHover(previewhover4)
       setFilter1(filters[0])
       setFilter2(filters[0])
       setFilter3(filters[0])
@@ -98,6 +123,10 @@ function Section() {
     }
     if (value == 'icon5') {
       setBanner(banner5)
+      setLogo(logo5)
+      setImgSrc(preview5)
+      setImgSrcSave(preview5)
+      setImgSrcHover(previewhover5)
       setFilter1(filters[0])
       setFilter2(filters[0])
       setFilter3(filters[0])
@@ -141,13 +170,12 @@ function Section() {
         </UlIcons>
       </Container>
       <ContainerLogoVideo>
-        {}
-        <Logo src={logo1} />
+        <Logo src={logo} />
         <ContainerTextVideo>
           <Video
-            src={imgSrc1}
-            onMouseOver={() => setImgSrc1(previewHover1)}
-            onMouseOut={() => setImgSrc1(preview1)}
+            src={imgSrc}
+            onMouseOver={() => setImgSrc(imgSrcHover)}
+            onMouseOut={() => setImgSrc(imgSrcSave)}
           />
         </ContainerTextVideo>
       </ContainerLogoVideo>
