@@ -10,7 +10,7 @@ interface TypePropsFilter {
 
 export const fadeIn = keyframes`
   from {
-    opacity: 0;
+    opacity: 0.3;
   }
   to {
     opacity: 1;
@@ -93,7 +93,7 @@ export const UlIcons = styled.div`
   display: flex;
   margin-top: 48px;
   img + img {
-    margin-right: 16px;
+    margin-left: 18px;
   }
   @media (min-width: 1000px) {
     & {
@@ -103,6 +103,7 @@ export const UlIcons = styled.div`
       img {
         margin-bottom: 20px;
         margin-right: 100px;
+        margin-left: 18px;
       }
       img + img {
         margin-bottom: 20px;
@@ -168,4 +169,10 @@ export const ContainerTextVideo = styled.div``
 
 export const Text = styled.img``
 
-export const Video = styled.img``
+export const Video = styled.img`
+  cursor: pointer;
+  transition: all;
+  &:hover {
+    animation: ${fadeIn} 0.5s ease-in;
+  }
+`

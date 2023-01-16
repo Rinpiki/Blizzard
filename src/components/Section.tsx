@@ -38,6 +38,7 @@ import previewHover2 from '../assets/icons-first-section/logo&video/video-previe
 import previewhover3 from '../assets/icons-first-section/logo&video/video-preview-hover3.png'
 
 function Section() {
+  const [imgSrc1, setImgSrc1] = useState(preview1)
   const filters = ['grayscale(100%)', 'none']
   const [filter1, setFilter1] = useState(filters[1])
   const [filter2, setFilter2] = useState(filters[0])
@@ -140,9 +141,14 @@ function Section() {
         </UlIcons>
       </Container>
       <ContainerLogoVideo>
+        {}
         <Logo src={logo1} />
         <ContainerTextVideo>
-          <Video src={preview1} />
+          <Video
+            src={imgSrc1}
+            onMouseOver={() => setImgSrc1(previewHover1)}
+            onMouseOut={() => setImgSrc1(preview1)}
+          />
         </ContainerTextVideo>
       </ContainerLogoVideo>
     </ContainerImg>

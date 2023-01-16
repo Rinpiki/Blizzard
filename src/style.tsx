@@ -33,6 +33,11 @@ export const Logo = styled.div`
     height: 2px;
     background: #01aefe;
   }
+  @media (min-width: 768px) {
+    &::after {
+      top: 90px;
+    }
+  }
   @media (min-width: 1010px) {
     &::after {
       top: 90px;
