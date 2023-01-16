@@ -22,7 +22,7 @@ export const Logo = styled.div`
   display: flex;
   padding: 24px;
   justify-content: space-between;
-  width: 100vw;
+  width: 100%;
   max-width: 1300px;
   align-items: center;
   &::after {
@@ -131,7 +131,7 @@ export const Headerr = styled.div`
   align-items: center;
   justify-content: center;
   z-index: 5;
-  width: 100vw;
+  width: 100%;
   border-bottom: 2px solid rgba(255, 255, 255, 0.1);
 `
 

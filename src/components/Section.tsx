@@ -93,6 +93,23 @@ function Section() {
     }
   }
 
+  const icons = [
+    { src: icon1, alt: 'primeiro icone', filter: filter1, id: 'icon1' },
+    { src: icon2, alt: 'segundo icone', filter: filter2, id: 'icon2' },
+    { src: icon3, alt: 'terceiro icone', filter: filter3, id: 'icon3' },
+    { src: icon4, alt: 'quarto icone', filter: filter4, id: 'icon4' },
+    { src: icon5, alt: 'quinto icone', filter: filter5, id: 'icon5' },
+  ]
+  function generateProps(icon: any) {
+    return {
+      filter: icon.filter,
+      id: icon.id,
+      onClick: setOption,
+      src: icon.src,
+      alt: icon.alt,
+    }
+  }
+
   return (
     <ContainerImg backgroundImage={banner}>
       <Container>
@@ -102,43 +119,17 @@ function Section() {
           <StyledButton>{btnText}</StyledButton>
         </div>
         <UlIcons>
-          <StyledImg
-            filter={filter1}
-            id="icon1"
-            onClick={setOption}
-            src={icon1}
-            alt="primeiro icone"
-          />
-          <StyledImg
-            filter={filter2}
-            id="icon2"
-            onClick={setOption}
-            src={icon2}
-            alt="segundo icone"
-          />
-          <StyledImg
-            filter={filter3}
-            id="icon3"
-            onClick={setOption}
-            src={icon3}
-            alt="terceiro icone"
-          />
-          <StyledImg
-            filter={filter4}
-            id="icon4"
-            onClick={setOption}
-            src={icon4}
-            alt="quarto icone"
-          />
-          <StyledImg
-            filter={filter5}
-            id="icon5"
-            onClick={setOption}
-            src={icon5}
-            alt="quinto icone"
-          />
+          {icons.map((icon, i) => (
+            <StyledImg key={i} {...generateProps(icon)} />
+          ))}
         </UlIcons>
       </Container>
+      <div>
+        <div></div>
+        <div>
+          <div></div>
+        </div>
+      </div>
     </ContainerImg>
   )
 }

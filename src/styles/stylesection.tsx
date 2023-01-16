@@ -1,9 +1,4 @@
 import styled, { keyframes } from 'styled-components'
-import banner1 from '../assets/banner/banner1.jpg'
-import banner2 from '../assets/banner/banner2.jpg'
-import banner3 from '../assets/banner/banner3.jpg'
-import banner4 from '../assets/banner/banner4.jpg'
-import banner5 from '../assets/banner/banner5.jpg'
 
 interface TypeProps {
   backgroundImage: string
@@ -30,8 +25,8 @@ export const fadeIn2 = keyframes`
   }
 `
 export const ContainerImg = styled.section<TypeProps>`
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 736px;
   display: flex;
   flex-direction: center;
   margin-top: -92px;
@@ -42,11 +37,18 @@ export const ContainerImg = styled.section<TypeProps>`
   background-repeat: no-repeat;
 `
 export const Container = styled.div`
-  width: 95%;
+  width: 90%;
   max-width: 1300px;
   margin: 131px auto 0px auto;
+  @media (min-width: 1000px) {
+    & {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      width: 93%;
+    }
+  }
 `
-
 export const TextoH1 = styled.h1`
   width: 297px;
   color: white;
@@ -92,6 +94,19 @@ export const UlIcons = styled.div`
   margin-top: 48px;
   img + img {
     margin-right: 16px;
+  }
+  @media (min-width: 1000px) {
+    & {
+      display: flex;
+      flex-direction: column;
+      margin-top: 25px;
+      img {
+        margin-bottom: 20px;
+      }
+      img + img {
+        margin-bottom: 20px;
+      }
+    }
   }
 `
 
