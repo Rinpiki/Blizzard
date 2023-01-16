@@ -39,13 +39,13 @@ export const ContainerImg = styled.section<TypeProps>`
 export const Container = styled.div`
   width: 90%;
   max-width: 1300px;
-  margin: 131px auto 0px auto;
+  margin: 207px auto 0px auto;
   @media (min-width: 1000px) {
     & {
       display: flex;
       flex-direction: row-reverse;
       justify-content: flex-end;
-      width: 93%;
+      width: 90%;
     }
   }
 `
@@ -102,10 +102,26 @@ export const UlIcons = styled.div`
       margin-top: 25px;
       img {
         margin-bottom: 20px;
+        margin-right: 100px;
       }
       img + img {
         margin-bottom: 20px;
       }
+    }
+  }
+  @media (min-width: 1040px) {
+    img {
+      margin-right: 130px;
+    }
+  }
+  @media (min-width: 1200px) {
+    img {
+      margin-right: 180px;
+    }
+  }
+  @media (min-width: 1400px) {
+    img {
+      margin-right: 240px;
     }
   }
 `
@@ -117,3 +133,39 @@ export const StyledImg = styled.img<TypePropsFilter>`
   filter: ${(props) => props.filter};
   cursor: pointer;
 `
+
+export const ContainerLogoVideo = styled.div`
+  display: none;
+  margin-top: 160px;
+  flex-direction: column;
+  align-items: center;
+  @media (min-width: 768px) {
+    display: flex;
+    position: absolute;
+    right: 5%;
+  }
+  @media (min-width: 1500px) {
+    right: 7%;
+  }
+  @media (min-width: 1554px) {
+    right: 10%;
+  }
+  @media (min-width: 1650px) {
+    right: 13%;
+  }
+  @media (min-width: 1758px) {
+    right: 15%;
+  }
+  @media (min-width: 1874px) {
+    right: 17%;
+  }
+`
+export const Logo = styled.img`
+  margin-bottom: 180px;
+`
+
+export const ContainerTextVideo = styled.div``
+
+export const Text = styled.img``
+
+export const Video = styled.img``

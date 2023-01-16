@@ -1,15 +1,18 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import {
   Container,
   ContainerImg,
+  ContainerLogoVideo,
+  ContainerTextVideo,
+  Logo,
   StyledButton,
   StyledImg,
   StyledP,
+  Text,
   TextoH1,
   UlIcons,
+  Video,
 } from 'src/styles/stylesection'
-import styled from 'styled-components'
-import { fadeIn } from '../styles/stylesection'
 import banner1 from '../assets/banner/banner1.jpg'
 import banner2 from '../assets/banner/banner2.jpg'
 import banner3 from '../assets/banner/banner3.jpg'
@@ -21,6 +24,18 @@ import icon2 from '../assets/icons-first-section/icon2.png'
 import icon3 from '../assets/icons-first-section/icon3.png'
 import icon4 from '../assets/icons-first-section/icon4.png'
 import icon5 from '../assets/icons-first-section/icon5.png'
+
+import logo1 from '../assets/icons-first-section/logo&video/logo1.png'
+import logo2 from '../assets/icons-first-section/logo&video/logo2.png'
+import logo3 from '../assets/icons-first-section/logo&video/logo3.png'
+
+import preview1 from '../assets/icons-first-section/logo&video/video-preview1.png'
+import preview2 from '../assets/icons-first-section/logo&video/video-preview2.png'
+import preview3 from '../assets/icons-first-section/logo&video/video-preview3.png'
+
+import previewHover1 from '../assets/icons-first-section/logo&video/video-preview-hover1.png'
+import previewHover2 from '../assets/icons-first-section/logo&video/video-preview-hover2.png'
+import previewhover3 from '../assets/icons-first-section/logo&video/video-preview-hover3.png'
 
 function Section() {
   const filters = ['grayscale(100%)', 'none']
@@ -124,12 +139,12 @@ function Section() {
           ))}
         </UlIcons>
       </Container>
-      <div>
-        <div></div>
-        <div>
-          <div></div>
-        </div>
-      </div>
+      <ContainerLogoVideo>
+        <Logo src={logo1} />
+        <ContainerTextVideo>
+          <Video src={preview1} />
+        </ContainerTextVideo>
+      </ContainerLogoVideo>
     </ContainerImg>
   )
 }

@@ -33,9 +33,12 @@ export const Logo = styled.div`
     height: 2px;
     background: #01aefe;
   }
-  @media (min-width: 768px) {
+  @media (min-width: 1010px) {
     &::after {
       top: 90px;
+    }
+    & {
+      width: 90%;
     }
   }
 
@@ -196,7 +199,7 @@ export const ContainerModalLogin = styled.div`
   position: absolute;
   left: 0;
   top: 0;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   z-index: 20;
   background-color: rgba(0, 0, 0, 0.5);

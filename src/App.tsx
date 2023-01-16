@@ -7,6 +7,7 @@ function App() {
     <>
       <Header />
       <Section />
+      <div>oi</div>
     </>
   )
 }
