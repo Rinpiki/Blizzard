@@ -80,6 +80,10 @@ export const ContainerIcons = styled.div`
   width: 100%;
   height: 447px;
   justify-content: space-between;
+  &:hover {
+    color: white;
+    cursor: pointer;
+  }
 `
 
 export const Icons = styled.div`
@@ -91,6 +95,10 @@ export const Text = styled.div`
   font-size: 14px;
   color: #9d9d9d;
   margin: 0px auto;
+  &:hover {
+    color: white;
+    cursor: pointer;
+  }
 `
 
 export const StyledUl = styled.div`

@@ -1,10 +1,6 @@
 import styled, { keyframes } from 'styled-components'
 import logar from './assets/icons/logar.png'
-import listicon1 from './assets/icons/listicon1.svg'
-import listicon2 from './assets/icons/listicon2.svg'
-import listicon3 from './assets/icons/listicon3.png'
-import listicon4 from './assets/icons/listicon4.svg'
-import listicon5 from './assets/icons/listicon5.svg'
+
 import loginModal from './assets/banner/login-bg.webp'
 
 //animaçao geral
@@ -164,7 +160,7 @@ export const ListOne = styled.ul`
   font-size: 20px;
   color: #ffff;
   margin-top: 100px;
-  margin-left: 20px;
+  margin-left: 25px;
   list-style: none;
   li {
     margin-bottom: 10px;
@@ -179,23 +175,19 @@ export const ListOne = styled.ul`
 export const ListTwo = styled(ListOne)`
   font-size: 16px;
   margin-top: 45px;
-  margin-left: 45px;
-  li:nth-child(1) {
-    list-style-image: url('${listicon1}');
-    margin-left: -8px;
+  div {
+    display: flex;
+    align-items: center;
+    flex-direction: center;
+    text-align: center;
+    margin-bottom: 10px;
   }
-  li:nth-child(2) {
-    list-style-image: url('${listicon2}');
-  }
-  li:nth-child(3) {
-    list-style-image: url('${listicon3}');
-  }
-  li:nth-child(4) {
-    list-style-image: url('${listicon4}');
-  }
-  li:nth-child(5) {
-    list-style-image: url('${listicon5}');
-  }
+`
+
+export const ImgIconMb = styled.img`
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
 `
 //modal de login
 
