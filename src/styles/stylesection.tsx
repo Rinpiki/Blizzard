@@ -3,6 +3,9 @@ import styled, { keyframes } from 'styled-components'
 interface TypeProps {
   backgroundImage: string
 }
+interface TypePropsWidth {
+  width: string
+}
 interface TypePropsFilter {
   filter?: string
   animation?: boolean
@@ -24,21 +27,31 @@ export const fadeIn2 = keyframes`
     opacity: 1;
   }
 `
-export const ContainerImg = styled.section<TypeProps>`
+export const ContainerAll = styled.div`
+  position: relative;
   width: 100%;
-
+  min-height: 667px;
+  height: 100vh;
+  max-height: 820px;
+  z-index: 3;
+`
+export const ContainerImg = styled.section<TypeProps>`
+  position: relative;
+  width: 100%;
+  min-height: 667px;
   height: 100vh;
   max-height: 820px;
   display: flex;
   flex-direction: center;
   margin-top: -92px;
-  z-index: 1;
   background-image: url(${(props) => props.backgroundImage});
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  transition: 0.3s ease-in-out;
 `
 export const Container = styled.div`
+  position: relative;
   width: 90%;
   max-width: 1300px;
   margin: 207px auto 0px auto;
@@ -52,11 +65,13 @@ export const Container = styled.div`
   }
 `
 export const TextoH1 = styled.h1`
+  transition: 0.3s ease-in-out;
   width: 297px;
   color: white;
   font-weight: 700;
   font-size: 40px;
   line-height: 110.2%;
+
   @media (min-width: 768px) {
     & {
       font-size: 64px;
@@ -70,6 +85,7 @@ export const TextoH1 = styled.h1`
   }
 `
 export const StyledP = styled.p`
+  transition: 0.3s ease-in-out;
   width: 90%;
   font-weight: 400;
   font-size: 18px;
@@ -80,7 +96,7 @@ export const StyledP = styled.p`
 `
 
 export const StyledButton = styled.button`
-  transition: transform 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
   padding: 14px 32px;
   background: #00aeff;
   margin-top: 32px;
@@ -191,4 +207,13 @@ export const Video = styled.img`
   &:hover {
     animation: ${fadeIn} 0.5s ease-in;
   }
+`
+export const Line = styled.div<TypePropsWidth>`
+  width: ${(props) => props.width};
+  transition: 0.3s ease-in-out;
+  position: relative;
+  height: 3px;
+  margin-top: -3px;
+  background: #00aeff;
+  z-index: 10;
 `

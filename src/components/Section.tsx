@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
 import {
   Container,
+  ContainerAll,
   ContainerImg,
   ContainerLogoVideo,
   ContainerTextVideo,
+  Line,
   Logo,
   StyledButton,
   StyledImg,
@@ -43,6 +45,7 @@ import previewhover4 from '../assets/icons-first-section/logo&video/video-previe
 import previewhover5 from '../assets/icons-first-section/logo&video/video-preview-hover5.png'
 
 function Section() {
+  const [line, setLine] = useState('20%')
   const [imgSrc, setImgSrc] = useState(preview1)
   const [imgSrcSave, setImgSrcSave] = useState(preview1)
   const [imgSrcHover, setImgSrcHover] = useState(previewHover1)
@@ -66,6 +69,7 @@ function Section() {
       setBanner(banner1)
       setLogo(logo1)
       setImgSrc(preview1)
+      setLine('20%')
       setImgSrcSave(preview1)
       setImgSrcHover(previewHover1)
       setFilter1(filters[1])
@@ -80,6 +84,7 @@ function Section() {
       setBanner(banner2)
       setLogo(logo2)
       setImgSrc(preview2)
+      setLine('40%')
       setImgSrcSave(preview2)
       setImgSrcHover(previewHover2)
       setFilter1(filters[0])
@@ -96,6 +101,7 @@ function Section() {
       setBanner(banner3)
       setLogo(logo3)
       setImgSrc(preview3)
+      setLine('60%')
       setImgSrcSave(preview3)
       setImgSrcHover(previewhover3)
       setFilter1(filters[0])
@@ -110,6 +116,7 @@ function Section() {
       setBanner(banner4)
       setLogo(logo4)
       setImgSrc(preview4)
+      setLine('80%')
       setImgSrcSave(preview4)
       setImgSrcHover(previewhover4)
       setFilter1(filters[0])
@@ -125,6 +132,7 @@ function Section() {
       setBanner(banner5)
       setLogo(logo5)
       setImgSrc(preview5)
+      setLine('99%')
       setImgSrcSave(preview5)
       setImgSrcHover(previewhover5)
       setFilter1(filters[0])
@@ -156,30 +164,33 @@ function Section() {
   }
 
   return (
-    <ContainerImg backgroundImage={banner}>
-      <Container>
-        <div>
-          <TextoH1>{text}</TextoH1>
-          <StyledP> {styledP}</StyledP>
-          <StyledButton>{btnText}</StyledButton>
-        </div>
-        <UlIcons>
-          {icons.map((icon, i) => (
-            <StyledImg key={i} {...generateProps(icon)} />
-          ))}
-        </UlIcons>
-      </Container>
-      <ContainerLogoVideo>
-        <Logo src={logo} />
-        <ContainerTextVideo>
-          <Video
-            src={imgSrc}
-            onMouseOver={() => setImgSrc(imgSrcHover)}
-            onMouseOut={() => setImgSrc(imgSrcSave)}
-          />
-        </ContainerTextVideo>
-      </ContainerLogoVideo>
-    </ContainerImg>
+    <ContainerAll>
+      <ContainerImg backgroundImage={banner}>
+        <Container>
+          <div>
+            <TextoH1>{text}</TextoH1>
+            <StyledP> {styledP}</StyledP>
+            <StyledButton>{btnText}</StyledButton>
+          </div>
+          <UlIcons>
+            {icons.map((icon, i) => (
+              <StyledImg key={i} {...generateProps(icon)} />
+            ))}
+          </UlIcons>
+        </Container>
+        <ContainerLogoVideo>
+          <Logo src={logo} />
+          <ContainerTextVideo>
+            <Video
+              src={imgSrc}
+              onMouseOver={() => setImgSrc(imgSrcHover)}
+              onMouseOut={() => setImgSrc(imgSrcSave)}
+            />
+          </ContainerTextVideo>
+        </ContainerLogoVideo>
+      </ContainerImg>
+      <Line width={line} />
+    </ContainerAll>
   )
 }
 
