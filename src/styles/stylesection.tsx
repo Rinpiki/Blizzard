@@ -36,6 +36,7 @@ export const ContainerAll = styled.div`
   z-index: 3;
 `
 export const ContainerImg = styled.section<TypeProps>`
+  filter: contrast(115%);
   position: relative;
   width: 100%;
   min-height: 667px;
