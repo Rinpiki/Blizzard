@@ -34,6 +34,7 @@ export const ContainerAll = styled.div`
   height: 100vh;
   max-height: 820px;
   z-index: 3;
+  margin-top: -92px;
 `
 export const ContainerImg = styled.section<TypeProps>`
   filter: contrast(115%);
@@ -44,7 +45,7 @@ export const ContainerImg = styled.section<TypeProps>`
   max-height: 820px;
   display: flex;
   flex-direction: center;
-  margin-top: -92px;
+
   background-image: url(${(props) => props.backgroundImage});
   background-size: cover;
   background-position: center;

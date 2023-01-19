@@ -11,7 +11,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background: #202a2d;
+  background: RGB(3, 3, 2);
   font-family: 'Poppins', sans-serif;
 }
 
