@@ -4,7 +4,7 @@ export const ContainerGeral = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 95%;
+  width: 90%;
   margin: 76px 0px;
 `
 
@@ -43,6 +43,7 @@ export const IconText = styled.div`
   justify-content: center;
   font-weight: 600;
   font-size: 14px;
+  cursor: pointer;
   color: #00aeff;
   img {
     margin-right: 12px;
