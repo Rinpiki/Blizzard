@@ -1,4 +1,5 @@
 import './App.css'
+import Footer from './components/Footer'
 import Header from './components/Header'
 import Section from './components/Section'
 import SectionGames from './components/SectionGames'
@@ -11,6 +12,7 @@ function App() {
       <Section />
       <SectionText />
       <SectionGames />
+      <Footer />
     </>
   )
 }

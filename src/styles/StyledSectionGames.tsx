@@ -4,9 +4,12 @@ export const ContainerGames = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(5, 1fr);
-  grid-column-gap: 10px;
+  grid-column-gap: 2px;
   grid-row-gap: 10px;
-  margin-bottom: 189px;
+  margin-bottom: 150px;
+  @media (min-width: 360px) {
+    grid-column-gap: 10px;
+  }
   @media (min-width: 768px) {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 1fr);
