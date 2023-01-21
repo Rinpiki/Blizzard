@@ -1,4 +1,6 @@
 import React from 'react'
+import { Slide } from 'react-awesome-reveal'
+
 import {
   Cards,
   ContainerGames,
@@ -84,13 +86,15 @@ function SectionGames() {
   return (
     <ContainerGames>
       {data.map((item, i) => (
-        <Cards key={i}>
-          <img src={item.img} alt={item.h1} />
-          <TextStyled>
-            <TextOne>{item.h1}</TextOne>
-            <TextTwo>{item.p}</TextTwo>
-          </TextStyled>
-        </Cards>
+        <Slide key={i}>
+          <Cards>
+            <img src={item.img} alt={item.h1} />
+            <TextStyled>
+              <TextOne>{item.h1}</TextOne>
+              <TextTwo>{item.p}</TextTwo>
+            </TextStyled>
+          </Cards>
+        </Slide>
       ))}
     </ContainerGames>
   )
