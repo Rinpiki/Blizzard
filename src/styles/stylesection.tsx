@@ -50,7 +50,6 @@ export const ContainerImg = styled.section<TypeProps>`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  transition: 0.3s ease-in-out;
 `
 export const Container = styled.div`
   position: relative;
