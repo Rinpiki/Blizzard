@@ -16,7 +16,7 @@
 - [Javascript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
 - [Prettier](https://prettier.io/)
 - [React](https://pt-br.reactjs.org/)
-- [Styled-Components.com](https://styled-components.com/)
+- [Styled-Components](https://styled-components.com/)
 - [Vite](https://vitejs.dev/)
 - [Eslint](https://eslint.org/)
  ## 🏗️Site
