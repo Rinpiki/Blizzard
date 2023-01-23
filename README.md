@@ -13,6 +13,7 @@
 
 - [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
 - [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
+- [TypeScript](https://www.typescriptlang.org/)
 - [Javascript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
 - [Prettier](https://prettier.io/)
 - [React](https://pt-br.reactjs.org/)
