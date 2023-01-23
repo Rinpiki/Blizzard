@@ -1,11 +1,11 @@
 # Blizzard
-![Screenshot_13](https://user-images.githubusercontent.com/74790193/195394165-a94a166a-2c71-490a-8418-bdf5ff4b7ad6.png)
+![Screenshot_1](https://user-images.githubusercontent.com/74790193/214060442-5e093262-59e7-467a-92fd-0152941cd9ab.png)
 # 📖 Sobre o projeto
-Este projecto é um website para um restaurante de hambúrgueres feito com React e Tailwind. Foi criado para praticar usando React e Tailwind juntos. O site web é simples, com apenas uma página.
-- Seção de promoções
-- Horário de funcionamento
-- Localização
-- Contato
+O site temático possui estilo semelhante ao da Blizzard, com três seções distintas. Ele é responsivo, animado e possui diversas interações. Além disso, conta com um menu de login e outras funcionalidades
+- Seção inicial mostrando 5 jogos
+- Header com menus
+- Cards de jogos com animaçao de entrada 
+- Footer com algumas informaçoes
 
 ## 🔧Tecnologias usadas
 
@@ -14,10 +14,10 @@ Este projecto é um website para um restaurante de hambúrgueres feito com React
 - [Javascript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
 - [Prettier](https://prettier.io/)
 - [React](https://pt-br.reactjs.org/)
-- [Tailwind](https://tailwindcss.com/)
+- [Styled-Components.com](https://styled-components.com/)
 - [Vite](https://vitejs.dev/)
 - [Eslint](https://eslint.org/)
  ## 🏗️Site
  Voce pode acessa o projeto por esse link
- - https://empire-burgue.vercel.app/
+ - https://blizzard-gilt.vercel.app/
 
